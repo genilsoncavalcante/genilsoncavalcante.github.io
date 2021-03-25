@@ -1,0 +1,22 @@
+/*
+
+Criação de Variáveis no CSS para armazenar falores padrões e evitar a repetição dos mesmos no código.
+OBS: A variáveis são somente para valores!!!
+
+*/
+
+/* DECLARAÇÃO DAS VARIÁVEIS */
+:root {
+    --cor-fundo-destaque: rgb(212, 116, 5) ;
+    --cor-frente-destaque: #FFF;
+    --espacamento-padrao: 0.5rem;
+    --font-family-padrao: Arial, Helvetica, sans-serif;
+}
+
+/* CHAMANDO AS VARIÁVEIS */
+
+h1 {
+    font-family: var(font-family-padrao);
+    color: var(--cor-frente-destaque);
+    background-color: var(--cor-fundo-destaque);
+}
