@@ -28,7 +28,9 @@ html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, li
 :root{/*VARIÁVEIS*/
     --corBackgroundPrimaria: #45dbfc;
     --corBackgroundSecundaria: #04133d;
+    --corBackgroundTerciaria: #d4e9ff;
     --corBackgroundDark: #1f1e1e;
+    --corAnimation: #a70707;
     --corTextPrimaria: #636363;
     --corTextSecundaria: #000;
 }
@@ -117,7 +119,7 @@ main .coluna{
     padding: 20px;
 }
 main .coluna section{
-    border-bottom: 1px solid #d4e9ff;
+    border-bottom: 1px solid var(--corBackgroundTerciaria);
     margin: 0 0 20px;
     min-height: 187px;
 }
@@ -154,10 +156,41 @@ input{
     height: 50px;
     display: none;
 }
-label{
-    float: right;
+
+header .container{
+    position: relative;
+}
+label {
     border: 3px solid#537df1;
     color: var(--corTextSecundaria);
+    position: absolute;
+    top: 4px;
+    right: 7px;
+    width: 53px;
+    height: 30px;
+    background-color: var(--corBackgroundSecundaria);
+    border-radius: 20px;
+    padding: 2px 3px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+label span{
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-color: var(--corBackgroundTerciaria);
+    border-radius: 100%;
+    transition: all ease .4s;
+}
+
+.ativar-dark:checked ~ .dark-mode label{
+    background-color: var(--corBackgroundTerciaria);
+}
+.ativar-dark:checked ~ .dark-mode label span{
+    background-color: var(--corBackgroundSecundaria);
+    /*margin-left: 22px;*/
+    transform: translateX(22px);
+    transition: all ease .4s;
 }
 
 .ativar-dark:checked ~ .dark-mode{
@@ -177,6 +210,24 @@ label{
 } 
 .ativar-dark:checked ~ .dark-mode main{
     background-color: var(--corBackgroundPrimaria);
+}
+
+/*ANIMAÇÔES*/
+@keyframes aumentarLargura{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+@keyframes aumentarAltura{
+    from{
+        height: 0;
+    }
+    to{
+        height: 100%;
+    }
 }
 
 
@@ -209,9 +260,43 @@ label{
         text-align: left;
     }
     main .coluna section{
-        border: 1px solid #d4e9ff;
+        border: 2px solid var(--corBackgroundTerciaria);
         padding: 20px;
+        position: relative;
     }
+
+    /*ANIMAÇÔES*/
+    main .coluna section span{
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border: 2px solid transparent;
+    }
+    main .coluna section .topo-direita{
+        top: -2px;
+        left: -2px;
+        animation-name: aumentarLargura, aumentarAltura;
+        animation-duration: 1s, 1s;
+        animation-delay: 2s, 3s;
+        animation-fill-mode: forwards;
+        border-top-color: var(--corAnimation);
+        border-right-color: var(--corAnimation);
+    }
+    main .coluna section .topo-esquerda{
+        bottom: -2px;
+        right: -2px;
+        animation-name: aumentarLargura, aumentarAltura;
+        animation-duration: 1s, 1s;
+        animation-delay: 4s, 5s;
+        animation-fill-mode: forwards;
+        border-bottom-color: var(--corAnimation);
+        border-left-color: var(--corAnimation);
+    }
+    main .coluna{
+        padding: 0;
+    }
+
     main .coluna{
         padding: 0;
     }
