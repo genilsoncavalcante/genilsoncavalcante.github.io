@@ -25,7 +25,8 @@ html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, li
     display: none;
 }
 
-:root{/*VARIÁVEIS*/
+/*VARIÁVEIS*/
+:root{
     --corBackgroundPrimaria: #45dbfc;
     --corBackgroundSecundaria: #04133d;
     --corBackgroundTerciaria: #d4e9ff;
@@ -112,7 +113,6 @@ footer nav .redes-sociais li a img{
     width: 40px;
     color: #537df1;
 }
-footer nav .redes-sociais li a img p{}
 
 /* PÁGINA INICIAL */
 main .coluna{
@@ -297,9 +297,6 @@ label span{
         padding: 0;
     }
 
-    main .coluna{
-        padding: 0;
-    }
     footer nav .redes-sociais li{
         margin: 0 14px;
         text-align: center;
