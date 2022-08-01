@@ -232,6 +232,7 @@ nav.active .header__list {
 .inicio__button {
     width: 100%;
     height: 100%;
+    margin-top: 2rem;
     color: white;
     font-family: RopaSans;
     border-radius: .333333333333rem;

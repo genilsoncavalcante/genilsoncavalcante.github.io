@@ -235,14 +235,15 @@ nav.active .header__list {
 .inicio__button {
     width: 100%;
     height: 100%;
+    margin-top: 2rem;
     color: white;
     font-family: RopaSans;
-    border-radius: .333333333333rem;
+    border-radius: 0.333333333333rem;
     letter-spacing: .133333333333rem;
     font-size: 1rem;
     font-weight: bold;
     background-color: transparent;
-    border: .2rem solid rgb(8, 172, 243);
+    border: 0.2rem solid rgb(8, 172, 243);
     transition: .7s;
     animation: animacao_button 2s linear infinite;
 }
@@ -1056,6 +1057,6 @@ body.dark-mode,
 .modal.dark-mode p {
     color: rgb(255, 255, 255);
 }
-.modal h3 {
+.modal.dark-mode h3 {
     color: rgb(184, 184, 184);
 }
