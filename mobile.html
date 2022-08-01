@@ -38,12 +38,6 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-09105HWPLY"></script>
     <script>
-        // REDIRECT
-        if (window.screen.availWidth > 900) {
-            window.location.href = "https://genilsoncavalcante.github.io/index.html";
-        };
-
-
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
@@ -516,6 +510,12 @@
     <script src="js/mobile-scripts.js"></script>
     <script src="aos-master/dist/aos.js"></script>
     <script>
+        // REDIRECT
+        if (window.screen.availWidth > 900) {
+            window.location.replace("https://genilsoncavalcante.github.io/index.html");
+        };
+
+
         // AOS
         AOS.init({
             

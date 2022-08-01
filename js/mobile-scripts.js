@@ -5,8 +5,8 @@ const nav = document.getElementById("nav");
 
 function toggleMenu(event) {
     if (event.type === "touchstart") event.preventDefault();
-    nav.classList.toggle("active");
-    const active = nav.classList.contains("active");
+        nav.classList.toggle("active");
+        const active = nav.classList.contains("active");
     event.currentTarget.setAttribute("aria-expanded", active);
     if (active) {
         event.currentTarget.setAttribute("aria-label", "Fechar Menu");
@@ -151,7 +151,6 @@ let clicks = 0;
 buttonDarkMode.addEventListener("click", () => {
     clicks += 1;
     soundClick.play();
-    console.log(clicks);
 
     if ((clicks / 10) == 1) {
         body.classList.add("dark-mode");
