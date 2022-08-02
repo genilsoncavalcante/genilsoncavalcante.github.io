@@ -115,13 +115,17 @@ const modal03 = document.querySelector(".modal-03");
 const soundClick = new Audio("../sound/mouse-click.mp3");
 const soundTransition = new Audio("../sound/transition.mp3");
 
-let clicks = 0;
 
-buttonDarkMode.addEventListener("click", () => {
-    clicks += 1;
-    soundClick.play();
+function toggleMode(event) {
+    if (event.type === "touchstart") event.preventDefault();
 
-    if ((clicks / 10) == 1) {
+    buttonDarkMode.classList.toggle("active");
+    const active = buttonDarkMode.classList.contains("active");
+
+    if (active) {
+
+        buttonDarkMode.innerHTML = `<img src="img/sun.svg" alt="Imagem da Lua - Mode Dark">`;
+
         header.classList.add("dark-mode");
         inicio.classList.add("dark-mode");
         sobreMim.classList.add("dark-mode");
@@ -139,7 +143,31 @@ buttonDarkMode.addEventListener("click", () => {
             window.location.href = "#inicio";
             soundTransition.play();
         }, 500);
-        
-    }
 
-});
+    } else {
+
+        buttonDarkMode.innerHTML = `<img src="img/moon.svg" alt="Imagem do Sol - Mode Light">`;
+
+        header.classList.remove("dark-mode");
+        inicio.classList.remove("dark-mode");
+        sobreMim.classList.remove("dark-mode");
+        trajetoria.classList.remove("dark-mode");
+        projetos.classList.remove("dark-mode");
+        skills.classList.remove("dark-mode");
+        certificados.classList.remove("dark-mode");
+        contato.classList.remove("dark-mode");
+        modal01.classList.remove("dark-mode");
+        modal02.classList.remove("dark-mode");
+        modal03.classList.remove("dark-mode");
+
+        // redirect
+        setTimeout(function() {
+            window.location.href = "#inicio";
+            soundTransition.play();
+        }, 500);
+
+    }
+}
+
+buttonDarkMode.addEventListener("click", toggleMode);
+buttonDarkMode.addEventListener("touchstart", toggleMode);
