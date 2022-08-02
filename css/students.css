@@ -170,6 +170,25 @@ body {
     background-color: #FFF;
 }
 
+.aside__form-selects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.aside__form-selects > select {
+    margin: 0 15px 15px;
+    padding: 10px;
+    border: .06666rem solid rgba(139, 139, 139, 0.744);
+    color: rgba(76, 76, 76, 0.744);
+    font-weight: bold;
+}
+.aside__form-selects > option {
+    padding: 10px;
+}
+
+
+
 @media(max-width: 800px) {
     body {
         height: auto;
