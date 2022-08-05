@@ -156,6 +156,7 @@ function toggleMode(event) {
 
         buttonDarkMode.innerHTML = `<img src="img/sun.svg" alt="Imagem da Lua - Mode Dark">`;
 
+        body.classList.add("dark-mode")
         header.classList.add("dark-mode");
         inicio.classList.add("dark-mode");
         sobreMim.classList.add("dark-mode");
@@ -178,6 +179,7 @@ function toggleMode(event) {
 
         buttonDarkMode.innerHTML = `<img src="img/moon.svg" alt="Imagem do Sol - Mode Light">`;
 
+        body.classList.add("dark-mode");
         header.classList.remove("dark-mode");
         inicio.classList.remove("dark-mode");
         sobreMim.classList.remove("dark-mode");
