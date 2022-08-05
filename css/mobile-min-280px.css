@@ -257,8 +257,9 @@ nav.active .header__list {
     font-weight: bold;
 }
 .inicio__redes-sociais {
-    position: absolute;
-    bottom: .33333333333333rem;
+    /* position: absolute; */
+    /* bottom: .33333333333333rem; */
+    margin: 4rem auto .4rem;
 }
 .inicio__redes-sociais-img {
     width: 2.333333333333rem;
