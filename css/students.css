@@ -57,7 +57,7 @@ body {
 .main__address-content h2 {
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: .8rem;
+    margin: 1rem;
     z-index: 1;
     color: tomato;
 }
