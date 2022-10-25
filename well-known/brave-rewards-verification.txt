@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: genilsoncavalcante.github.io
+Token: a17f3e03ab1a187be093caafcf4818862b388757f69b16c98877876a0e1f368e
